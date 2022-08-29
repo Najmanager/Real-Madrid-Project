@@ -1,0 +1,33 @@
+/* o klubie --> about section */
+
+.about-image {
+    height: 100vh;
+}
+
+.about-text {
+    margin: 6em 0;
+
+    @include mq() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    p {
+        font-size: .875rem;
+        width: 80%;
+        margin: 1em auto;
+
+        @include mq() {
+            font-size: 1.15rem;
+        }
+    }
+}
+
+@include mq() {
+    .about-section-container {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

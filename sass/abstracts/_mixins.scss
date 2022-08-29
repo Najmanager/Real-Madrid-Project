@@ -1,0 +1,13 @@
+@mixin ss($fs: 3.75rem, $ff: $ff-ss, $color: $accent, $ls: 3px, $tt: uppercase) {
+    font-size: $fs;
+    font-family: $ff;
+    color: $color;
+    letter-spacing: $ls;
+    text-transform: $tt;
+}
+
+@mixin mq($width: 50em) {
+    @media (min-width: $width) {
+        @content;
+    }
+}

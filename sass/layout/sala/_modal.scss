@@ -1,0 +1,70 @@
+/* sala --> modal */
+
+.modal {
+    position: fixed;
+    display: none;
+    z-index: 10;
+    background: $white;
+    overflow-y: scroll;
+    box-shadow: 0 0 0 3em rgba($color: black, $alpha: .5);
+}
+
+.is-open {
+    display: flex;
+    flex-direction: column;
+    inset: .5em;
+
+    @include mq() {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        inset: 2em;
+    }
+}
+
+.modal-text-content-container {
+    margin: 2em 1em;
+
+    @include mq() {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        margin-inline: 3em;
+        gap: 2em;
+    }
+}
+
+.modal-header {
+    font-size: 2.18rem;
+    margin-bottom: .5em;
+
+    @include mq() {
+        font-size: 3.75rem;
+    }
+}
+
+.modal-text {
+    font-size: 1rem;
+
+    @include mq() {
+        font-size: 1.25rem
+    }
+}
+
+.modal-image {
+    height: 60vh;
+
+    @include mq() {
+        height: 100vh;
+    }
+}
+
+.close-modal {
+    position: fixed;
+    cursor: pointer;
+    background: white;
+    border: none;
+    width: 2em;
+    height: 2em;
+    border-radius: 50%;
+}

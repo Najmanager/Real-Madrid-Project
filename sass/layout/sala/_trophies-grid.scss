@@ -1,0 +1,66 @@
+/* sala --> trophies section */
+
+.trophies-grid-layout {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    @media (max-width: 50em) {
+        display: block;
+    }
+}
+
+.span-2 {
+    grid-column: span 2;
+    grid-row: span 2;
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+        grid-column: span 1;
+        grid-row: span 1;
+    }
+
+    img {
+        height: 60vh;
+
+        @include mq() {
+            height: 100vh;
+        }
+    }
+}
+
+.trophy-container:not(.span-2) img {
+    height: 60vh;
+
+    @include mq() {
+        height: 50vh;
+    }
+}
+
+.span-2-last {
+    grid-column: span 2;
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+        grid-column: span 1;
+    }
+}
+
+.trophy-container {
+    position: relative;
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+        img {
+            height: 50vh;
+        }
+    }
+
+    &:hover {
+        cursor: pointer;
+    }
+
+    &:hover .modal-open {
+        display: block;
+    }
+}

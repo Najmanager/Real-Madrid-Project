@@ -1,0 +1,33 @@
+/* home --> hero section */
+
+.hero-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    height: 100vh;
+
+}
+
+.hero-section::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    opacity: .1;
+    z-index: -1;
+    background-image: url(../img/home/hero_img.jpg);
+}
+
+.hero-title {
+    font-size: 2rem;
+    padding-inline: .5em;
+    @include mq() {
+        font-size: 3.125rem;
+    }
+
+    span {
+        margin-top: 1em;
+        display: block;
+    }
+}

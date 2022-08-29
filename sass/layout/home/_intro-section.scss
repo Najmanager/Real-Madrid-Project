@@ -1,0 +1,29 @@
+/* home --> intro section */
+
+.intro-title {
+    margin: 1em;
+    font-size: 2.18rem;
+
+    @include mq() {
+        font-size: 3.75rem;
+    }
+}
+
+.intro-text {
+    padding: 0 2em 4em;
+    margin-inline: auto;
+    font-size: .875rem;
+    max-width: 1000px;
+
+    @include mq() {
+        font-size: 1.25rem;
+    }
+}
+
+.intro-image {
+    height: 40vh;
+
+    @include mq() {
+        height: 80vh;
+    }
+}

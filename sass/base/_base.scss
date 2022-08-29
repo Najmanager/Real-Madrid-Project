@@ -1,0 +1,25 @@
+/* General styling */
+
+body {
+    font-family: $ff-s;
+    line-height: 1.6;
+    font-size: 1.25rem;
+}
+
+h1 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    font-weight: $fw-b;
+    color: $accent;
+    font-style: italic;
+}
+
+h2 {
+    text-align: center;
+    @include ss();
+}
+
+h3 {
+    @include ss($fs: 3.125rem)
+}
+

@@ -1,0 +1,40 @@
+/* footer */
+
+footer {
+    background-color: $accent;
+    color: $white;
+    display: flex;
+    flex-direction: column;
+    gap: 1.625em;
+    padding: 1.25em 0;
+
+    @include mq() {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        padding: 2em 0;
+    }
+}
+
+footer > * {
+    font-size: .625rem;
+    text-align: center;
+
+    @include mq() {
+        font-size: .875rem;
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+
+    @include mq() {
+        gap: 5em;
+    }
+}
+
+.copyright {
+    opacity: .5;
+}

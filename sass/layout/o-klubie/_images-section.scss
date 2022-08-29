@@ -1,0 +1,22 @@
+/* o klubie --> images section */
+
+.o-klubie-subpages-image-main {
+    height: 60vh;
+    position: relative;
+
+    @include mq() {
+        height: 90vh;
+        width: 50vw;
+    }
+}
+
+.image-container {
+    position: relative;
+}
+
+@include mq() {
+    .row {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+}

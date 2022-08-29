@@ -1,0 +1,33 @@
+/* chwile --> grid-section */
+
+.article-title {
+    font-size: 2.5rem;
+    line-height: 1.1;
+}
+
+.next-line {
+    display: block;
+}
+
+.article-text {
+    font-size: 1rem;
+}
+
+.read-more-btn {
+    font-size: 1rem;
+}
+
+.chwile-article-image-main {
+    height: 60vh;
+}
+
+@media (max-width: 50em) {
+    .text-hidden {
+        display: none;
+    }
+
+    .grid-column-img-reverse,
+    .grid-column {
+        position: relative;
+    }
+}

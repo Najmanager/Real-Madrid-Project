@@ -1,0 +1,63 @@
+/* home --> grid layout */
+
+.home-subpages-image-main {
+    height: 60vh;
+}
+
+@include mq() {
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    
+    .grid-column-img-reverse {
+        grid-column: 1/2;
+        grid-row: 1/2;
+    }
+    
+    .grid-column-reverse {
+        grid-column: 2/3;
+    }
+
+    .home-subpages-image-main {
+        height: 90vh;
+    }
+}
+
+.grid-title {
+    margin-inline: auto;
+    font-size: 2.18rem;
+
+    @include mq() {
+        font-size: 3.125rem;
+        margin: 0;
+    }
+}
+
+.grid-text {
+    max-width: 1100px;
+    font-size: 0.875rem;
+    padding-inline: 2em;
+
+    @include mq() {
+        font-size: 1.25rem;
+        padding: 0;
+    }
+}
+
+.text-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 2em auto;
+    gap: 2em;
+    max-width: 40ch
+}
+
+
+@media (min-width: 50em) and (max-width: 1200px) {
+    .text-content {
+        max-width: 30ch;
+    }
+}

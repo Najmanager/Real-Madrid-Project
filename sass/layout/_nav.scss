@@ -1,0 +1,105 @@
+/* navigation */
+
+.main-nav {
+    background-color: $accent;
+    position: fixed;
+    inset: 0;
+    left: 100%;
+    transition: all ease-in-out 250ms;
+    z-index: 10;
+    
+    &.open {
+        left: 0
+    }
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow: hidden
+}
+
+li {
+    @include ss();
+}
+
+a {
+    text-decoration: none;
+    color: $white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-toggle {
+    display: block;
+    padding: 1em;
+    position: absolute;
+    right: .5em;
+    top: .5em;
+    cursor: pointer;
+    z-index: 1000;
+    
+    @include mq() {
+        top: 1em;
+        right: 1em
+    }
+}
+
+.nav-toggle.open {
+    position: fixed;
+}
+
+.hamburger,
+.hamburger::before,
+.hamburger::after,
+.hamburger-color-reverse,
+.hamburger-color-reverse::before,
+.hamburger-color-reverse::after {
+    content: '';
+    display: block;
+    width: 2.375em;
+    height: 3px;
+    background-color: $accent;
+    transition: all ease-in-out 250ms;
+}
+
+.hamburger::before,
+.hamburger-color-reverse::before {
+    transform: translateY(-6px);
+}
+
+.hamburger::after,
+.hamburger-color-reverse::after {
+    transform: translateY(3px);
+}
+
+.hamburger-color-reverse,
+.hamburger-color-reverse::before,
+.hamburger-color-reverse::after {
+    background-color: $white;
+    opacity: .9;
+
+    @include mq() {
+        background-color: $accent;
+    }
+}
+
+.hamburger.open {
+    background-color: $white;
+    transform: rotate(45deg);
+
+    &::before {
+        background-color: $white;
+        transform: rotate(90deg);
+    }
+
+    &::after {
+        display: none;
+    }
+}

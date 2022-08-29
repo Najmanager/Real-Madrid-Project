@@ -1,0 +1,56 @@
+/* Buttons */
+
+.btn {
+    color: $accent;
+    background: transparent;
+    padding: .5em 2em;
+    border: 3px solid $accent;
+    font-weight: $fw-b;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 150ms;
+    font-size: .875rem;
+    margin-inline: auto;
+
+    &:hover {
+        color: $white;
+        background: $accent;
+    }
+
+    @include mq() {
+        font-size: 1.5625rem;
+        margin-inline: 0;
+    }
+}
+
+.explore-btn {
+    color: $white;
+    background: $accent;
+    width: 80%;
+    display: block;
+    margin: .5em auto 2em;
+
+    @include mq() {
+        display: none;
+    }
+}
+
+/* Open modal button */
+
+.modal-open {
+    display: block;
+
+    @include mq() {
+        position: absolute;
+        bottom: 10%;
+        left: 50%;
+        font-size: 1.2rem;
+        transform:  translate(-50%);
+        margin: 0;
+        display: none;
+    }
+
+    @media (min-width: 800px) and (max-width: 1200px) {
+        font-size: 1.5rem;
+    }
+}
